@@ -49,11 +49,9 @@
    CARD HOVER
 ================================ */
 
-.skill-card,
 .project-card,
 .certificate-card,
-.info-card,
-.timeline-content{
+.info-card{
 
     transition:
         transform .35s ease,
@@ -62,11 +60,9 @@
 
 }
 
-.skill-card:hover,
 .project-card:hover,
 .certificate-card:hover,
-.info-card:hover,
-.timeline-content:hover{
+.info-card:hover{
 
     transform:translateY(-12px);
 

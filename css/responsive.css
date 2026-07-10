@@ -97,6 +97,24 @@ grid-template-columns:1fr;
 
 }
 
+.timeline-item{
+
+grid-template-columns:1fr;
+
+gap:40px;
+
+}
+
+.timeline-content{
+
+grid-column:1;
+
+max-width:720px;
+
+margin:0 auto;
+
+}
+
 }
 
 /* ===================================
@@ -147,10 +165,17 @@ justify-content:center;
 
 }
 
-.timeline{
+.timeline::before,
+.timeline::after{
+    left:12px;
+}
 
-margin-left:15px;
+.timeline-dot{
+    left:12px;
+}
 
+.timeline-content{
+    margin-left:38px;
 }
 
 .section-title h2{
