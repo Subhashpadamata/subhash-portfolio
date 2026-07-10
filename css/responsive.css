@@ -70,11 +70,12 @@ justify-content:center;
 
 .about-container{
 
-flex-direction:column;
+grid-template-columns:1fr;
 
 }
 
-.about-info{
+.about-profile-card,
+.about-text{
 
 width:100%;
 
@@ -140,9 +141,9 @@ grid-template-columns:1fr;
 
 }
 
-.about-info{
+.about-tech-chips{
 
-grid-template-columns:1fr;
+justify-content:center;
 
 }
 
