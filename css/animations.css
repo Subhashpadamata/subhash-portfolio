@@ -1,0 +1,90 @@
+/* ===============================
+   SCROLL REVEAL ANIMATION
+================================ */
+
+.reveal{
+
+    opacity:0;
+    transform:translateY(80px);
+    transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+/* ===============================
+   CARD HOVER
+================================ */
+
+.skill-card,
+.project-card,
+.certificate-card,
+.info-card,
+.timeline-content{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+}
+
+.skill-card:hover,
+.project-card:hover,
+.certificate-card:hover,
+.info-card:hover,
+.timeline-content:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+    0 15px 35px rgba(0,217,255,.15);
+
+}
+
+/* ===============================
+   HERO ENTRANCE
+================================ */
+
+.hero-content{
+    animation:heroFadeUp .9s ease both;
+}
+
+.verification-pipeline{
+    animation:heroFadeUp .9s ease .18s both;
+}
+
+@keyframes heroFadeUp{
+    from{
+        opacity:0;
+        transform:translateY(28px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===============================
+   PIPELINE FLOW
+================================ */
+
+.pipeline-connector::after{
+    animation:pipelineFlow 1.8s linear infinite;
+}
+
+@keyframes pipelineFlow{
+    from{
+        transform:translateY(-34px);
+    }
+
+    to{
+        transform:translateY(34px);
+    }
+}

@@ -1,0 +1,73 @@
+/*=========================================
+VERIFICATION EXPERTISE
+=========================================*/
+
+.expertise{
+
+    padding:100px 8%;
+
+    background:#050816;
+
+}
+
+.expertise-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+.expertise-card{
+
+    background:#0F1B2D;
+
+    border:1px solid rgba(0,217,255,.15);
+
+    border-radius:18px;
+
+    padding:35px;
+
+    transition:.35s;
+
+}
+
+.expertise-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#00D9FF;
+
+    box-shadow:0 15px 35px rgba(0,217,255,.15);
+
+}
+
+.expertise-card h3{
+
+    color:#00D9FF;
+
+    margin-bottom:25px;
+
+    font-size:26px;
+
+}
+
+.expertise-card ul{
+
+    list-style:none;
+
+}
+
+.expertise-card li{
+
+    padding:10px 0;
+
+    color:#D8E4EF;
+
+    font-size:17px;
+
+}

@@ -1,0 +1,125 @@
+/* ===========================
+   ABOUT
+=========================== */
+
+.about{
+    border-top:1px solid rgba(255,255,255,.06);
+}
+
+.about{
+
+padding:90px 8%;
+
+background:#07111f;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.section-title h2{
+
+font-size:42px;
+
+font-family:'Orbitron',sans-serif;
+
+color:#00D9FF;
+
+}
+
+.section-title p{
+
+margin-top:12px;
+
+color:#8FA8C4;
+
+}
+
+.about-container{
+
+display:flex;
+
+justify-content:space-between;
+
+gap:70px;
+
+align-items:flex-start;
+
+}
+
+.about-text{
+
+flex:1;
+
+}
+
+.about-text h3{
+
+font-size:34px;
+
+margin-bottom:25px;
+
+}
+
+.about-text p{
+
+font-size:18px;
+
+line-height:34px;
+
+color:#AFC2D6;
+
+margin-bottom:20px;
+
+}
+
+.about-text strong{
+
+color:#00D9FF;
+
+}
+
+.about-info{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+width:420px;
+
+}
+
+.info-card{
+
+background:#0F1B2D;
+
+padding:30px;
+
+border-radius:15px;
+
+border:1px solid rgba(0,217,255,.15);
+
+}
+
+.info-card h4{
+
+color:#00D9FF;
+
+margin-bottom:12px;
+
+}
+
+.info-card span{
+
+color:#E3EEF9;
+
+font-weight:500;
+
+}

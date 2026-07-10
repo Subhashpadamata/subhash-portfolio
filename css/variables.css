@@ -1,0 +1,18 @@
+:root{
+
+--primary:#00D9FF;
+--background:#050816;
+--card:#0F1B2D;
+--card2:#13253D;
+
+--text:#FFFFFF;
+--text2:#AFC2D6;
+
+--radius:18px;
+
+--transition:.35s;
+
+--shadow:
+0 10px 30px rgba(0,217,255,.15);
+
+}

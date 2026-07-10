@@ -1,0 +1,101 @@
+/*===================================
+CERTIFICATIONS
+===================================*/
+
+.certifications{
+
+    padding:100px 8%;
+
+    background:#071321;
+
+}
+
+.certification-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.certificate-card{
+
+    background:#0F1B2D;
+
+    border:1px solid rgba(0,217,255,.15);
+
+    border-radius:18px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.certificate-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#00D9FF;
+
+    box-shadow:0 15px 35px rgba(0,217,255,.18);
+
+}
+
+.certificate-icon{
+
+    width:75px;
+
+    height:75px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#081E34;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#00D9FF;
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+}
+
+.certificate-card h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+.certificate-card p{
+
+    color:#9FB2C8;
+
+    margin-bottom:18px;
+
+    line-height:28px;
+
+}
+
+.certificate-card span{
+
+    color:#00D9FF;
+
+    font-weight:600;
+
+}

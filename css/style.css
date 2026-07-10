@@ -1,0 +1,372 @@
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050816;
+    color:#ffffff;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:82px;
+    padding:0 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(10,20,40,.45);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    z-index:999;
+    transition:.4s;
+}
+
+.logo{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-title{
+    font-family:'Orbitron',sans-serif;
+    font-size:28px;
+    font-weight:700;
+    letter-spacing:3px;
+    color:#00D9FF;
+}
+
+.logo-role{
+    font-size:11px;
+    letter-spacing:2px;
+    margin-top:3px;
+    color:#8DA6C1;
+}
+
+.nav-menu{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+.nav-menu li{
+    list-style:none;
+}
+
+.nav-menu a{
+    color:#d8e4ef;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:500;
+    position:relative;
+    transition:.35s;
+}
+
+.nav-menu a:hover{
+    color:#00D9FF;
+}
+
+.nav-menu a::after{
+    content:"";
+    position:absolute;
+    bottom:-10px;
+    left:0;
+    width:0;
+    height:2px;
+    background:#00D9FF;
+    transition:.35s;
+}
+
+.nav-menu a:hover::after,
+.nav-menu .active::after{
+    width:100%;
+}
+
+.nav-menu .active{
+    color:#00D9FF;
+}
+
+.nav-icons{
+    width:46px;
+    height:46px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:#101B31;
+    color:#00D9FF;
+    cursor:pointer;
+    transition:.35s;
+    font-size:18px;
+}
+
+.nav-icons:hover{
+    transform:rotate(20deg);
+    background:#00D9FF;
+    color:#050816;
+    box-shadow:0 0 25px #00D9FF;
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:140px 8% 80px;
+}
+
+.hero-content{
+    width:55%;
+}
+
+.hero-intro{
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:4px;
+    color:#00D9FF;
+}
+
+.hero-title{
+    margin-top:18px;
+    font-size:78px;
+    font-family:'Orbitron',sans-serif;
+    line-height:1.1;
+}
+
+.hero-role{
+    margin-top:20px;
+    font-size:32px;
+    font-weight:500;
+    color:#d7e5f2;
+}
+
+.hero-description{
+    margin-top:30px;
+    max-width:650px;
+    font-size:18px;
+    line-height:36px;
+    color:#9fb2c8;
+}
+
+.hero-description strong{
+    color:#00D9FF;
+}
+
+/* ==========================================================
+   HERO BUTTONS & SKILLS
+========================================================== */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:40px;
+}
+
+.skills span{
+    padding:12px 22px;
+    border-radius:40px;
+    border:1px solid rgba(0,217,255,.35);
+    background:#0f1830;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.skills span:hover{
+    background:#00D9FF;
+    color:#050816;
+    transform:translateY(-5px);
+}
+
+.hero-buttons{
+    margin-top:45px;
+    display:flex;
+    gap:20px;
+}
+
+.primary-btn{
+    background:#00D9FF;
+    color:#071321;
+    padding:18px 36px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #00D9FF;
+}
+
+.secondary-btn{
+    padding:18px 36px;
+    border:2px solid #00D9FF;
+    border-radius:10px;
+    color:#ffffff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+    background:#00D9FF;
+    color:#071321;
+}
+
+/* ==========================================================
+   HERO IMAGE
+========================================================== */
+
+.hero-image{
+    width:40%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.processor-circle{
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:2px solid rgba(0,217,255,.20);
+    background:radial-gradient(circle,#10233d,#081220);
+}
+
+.processor-box{
+    width:180px;
+    height:180px;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#132a45;
+    color:#00D9FF;
+    font-size:36px;
+    font-family:'Orbitron',sans-serif;
+    box-shadow:0 0 35px rgba(0,217,255,.35);
+}
+
+.footer{
+
+    background:#050816;
+
+    text-align:center;
+
+    padding:35px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.footer p{
+
+    color:#8DA6C1;
+
+}
+
+/*=========================
+Scroll To Top Button
+=========================*/
+
+#topBtn{
+
+position:fixed;
+
+right:35px;
+
+bottom:35px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#00D9FF;
+
+color:#071321;
+
+font-size:22px;
+
+cursor:pointer;
+
+opacity:0;
+
+pointer-events:none;
+
+transition:.35s;
+
+box-shadow:0 0 20px rgba(0,217,255,.35);
+
+z-index:999;
+
+}
+
+#topBtn:hover{
+
+transform:translateY(-6px);
+
+}
+
+/*=========================
+Light Theme
+=========================*/
+
+body.light-mode{
+
+background:#f5f8fc;
+
+color:#111;
+
+}
+
+body.light-mode .navbar{
+
+background:rgba(255,255,255,.8);
+
+}
+
+body.light-mode .project-card,
+body.light-mode .skill-card,
+body.light-mode .certificate-card,
+body.light-mode .timeline-content,
+body.light-mode .info-card{
+
+background:#ffffff;
+
+color:#111;
+
+}
+
+body.light-mode .hero-description,
+body.light-mode p{
+
+color:#444;
+
+}
