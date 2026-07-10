@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
 
@@ -493,94 +494,180 @@
 <section id="projects" class="projects reveal">
 
     <div class="section-title">
-        <h2>Projects</h2>
-        <p>Formal Verification & Design Verification Projects</p>
+        <h2>Featured Projects</h2>
+        <p>Selected Formal Verification and Verification Engineering work.</p>
     </div>
 
     <div class="projects-grid">
 
         <!-- Project 1 -->
 
-        <div class="project-card">
+        <article class="project-card">
 
-            <h3>FIFO Formal Verification</h3>
-
-            <div class="project-tags">
-                <span>FPV</span>
-                <span>SVA</span>
-                <span>VC Formal</span>
+            <div class="project-card-header">
+                <h3>FIFO Formal Verification</h3>
+                <span class="project-status">Completed</span>
             </div>
 
-            <p>
-                Verified FIFO functionality using SystemVerilog Assertions.
-                Proved overflow, underflow, full, empty and data integrity
-                properties using Synopsys VC Formal.
-            </p>
+            <div class="project-section">
+                <h4>Project Overview</h4>
+                <p class="project-overview">
+                    Verified FIFO behavior with a formal-first approach focused on overflow,
+                    underflow, full, empty, and data integrity scenarios. The objective was
+                    to prove correctness across boundary cases and control-path transitions.
+                </p>
+            </div>
 
-        </div>
+            <div class="project-role">
+                <span>Role</span>
+                <strong>Formal Verification Engineer</strong>
+            </div>
+
+            <div class="project-section">
+                <h4>Technologies</h4>
+                <div class="project-tags">
+                    <span>SystemVerilog</span>
+                    <span>SVA</span>
+                    <span>VC Formal</span>
+                    <span>Verdi</span>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h4>Responsibilities</h4>
+                <ul class="project-responsibilities">
+                    <li>Developed SystemVerilog Assertions for FIFO control behavior.</li>
+                    <li>Proved overflow and underflow protection properties.</li>
+                    <li>Debugged counterexamples and refined formal constraints.</li>
+                    <li>Analyzed proof results and improved convergence.</li>
+                </ul>
+            </div>
+
+            <div class="project-learning">
+                <span>Key Learning</span>
+                <p>Strengthened practical understanding of data integrity proofs and control-path corner cases.</p>
+            </div>
+
+            <div class="project-footer">
+                <span>Verification Status</span>
+                <strong>PASS</strong>
+            </div>
+
+        </article>
 
         <!-- Project 2 -->
 
-        <div class="project-card">
+        <article class="project-card">
 
-            <h3>AXI3 Protocol Verification</h3>
-
-            <div class="project-tags">
-                <span>SystemVerilog</span>
-                <span>Protocol</span>
-                <span>Verification</span>
+            <div class="project-card-header">
+                <h3>AXI3 Interface Verification</h3>
+                <span class="project-status">Completed</span>
             </div>
 
-            <p>
-                Verified AXI3 protocol including burst transfers,
-                READY/VALID handshaking and protocol compliance using
-                assertions and simulation.
-            </p>
+            <div class="project-section">
+                <h4>Project Overview</h4>
+                <p class="project-overview">
+                    Verified AXI3 interface behavior around channel handshakes, burst transfers,
+                    and protocol timing. The work focused on catching protocol violations through
+                    assertion-driven checks and waveform-guided debug.
+                </p>
+            </div>
 
-        </div>
+            <div class="project-role">
+                <span>Role</span>
+                <strong>Formal Verification Engineer</strong>
+            </div>
+
+            <div class="project-section">
+                <h4>Technologies</h4>
+                <div class="project-tags">
+                    <span>SystemVerilog</span>
+                    <span>SVA</span>
+                    <span>AXI3</span>
+                    <span>Simulation</span>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h4>Responsibilities</h4>
+                <ul class="project-responsibilities">
+                    <li>Created assertions for READY/VALID handshake correctness.</li>
+                    <li>Checked burst transfer sequencing and protocol compliance.</li>
+                    <li>Reviewed waveform behavior during debug using Verdi.</li>
+                    <li>Validated interface scenarios through targeted verification.</li>
+                </ul>
+            </div>
+
+            <div class="project-learning">
+                <span>Key Learning</span>
+                <p>Improved protocol-level thinking around AXI channel independence and timing alignment.</p>
+            </div>
+
+            <div class="project-footer">
+                <span>Verification Status</span>
+                <strong>Completed</strong>
+            </div>
+
+        </article>
 
         <!-- Project 3 -->
 
-        <div class="project-card">
+        <article class="project-card">
 
-            <h3>APB Protocol Verification</h3>
-
-            <div class="project-tags">
-                <span>APB</span>
-                <span>SVA</span>
-                <span>RTL</span>
+            <div class="project-card-header">
+                <h3>APB Interface Verification</h3>
+                <span class="project-status">Completed</span>
             </div>
 
-            <p>
-                Developed assertions and verified APB protocol
-                transactions, timing behavior and control signals.
-            </p>
-
-        </div>
-
-        <!-- Project 4 -->
-
-        <div class="project-card">
-
-            <h3>Formal Verification Labs</h3>
-
-            <div class="project-tags">
-                <span>MMU</span>
-                <span>Processor</span>
-                <span>Reachability</span>
+            <div class="project-section">
+                <h4>Project Overview</h4>
+                <p class="project-overview">
+                    Verified APB interface transactions, setup and access phases, and control
+                    signal behavior. The objective was to ensure clean protocol operation across
+                    read and write transfers.
+                </p>
             </div>
 
-            <p>
-                Worked on multiple formal verification labs including
-                MMU, Processor, Arbiter, Reachability and HMAC DRBG
-                using Synopsys VC Formal.
-            </p>
-
+            <div class="project-role">
+                <span>Role</span>
+                <strong>Formal Verification Engineer</strong>
             </div>
 
+            <div class="project-section">
+                <h4>Technologies</h4>
+                <div class="project-tags">
+                    <span>SystemVerilog</span>
+                    <span>SVA</span>
+                    <span>APB</span>
+                    <span>Verdi</span>
+                </div>
             </div>
 
-        </section>
+            <div class="project-section">
+                <h4>Responsibilities</h4>
+                <ul class="project-responsibilities">
+                    <li>Developed assertions for APB transfer sequencing.</li>
+                    <li>Verified control signal stability across transaction phases.</li>
+                    <li>Checked read and write protocol behavior.</li>
+                    <li>Debugged failures and refined verification intent.</li>
+                </ul>
+            </div>
+
+            <div class="project-learning">
+                <span>Key Learning</span>
+                <p>Built stronger verification discipline around simple bus protocols and timing-sensitive checks.</p>
+            </div>
+
+            <div class="project-footer">
+                <span>Verification Status</span>
+                <strong>Completed</strong>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
 
         <!-- Certifications -->
 
@@ -775,7 +862,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <link rel="stylesheet" href="css/projects.css">  
     <link rel="stylesheet" href="css/certifications.css">
     <link rel="stylesheet" href="css/contact.css">
 <footer class="footer">

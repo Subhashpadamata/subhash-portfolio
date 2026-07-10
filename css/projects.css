@@ -1,91 +1,253 @@
 /* ===================================
-   PROJECTS
+   FEATURED PROJECTS
 =================================== */
 
 .projects{
-
-    padding:100px 8%;
-
-    background:#050816;
-
+    padding:110px 8%;
+    background:
+        radial-gradient(circle at 14% 20%, rgba(0,217,255,.07), transparent 30%),
+        radial-gradient(circle at 84% 70%, rgba(45,113,255,.08), transparent 34%),
+        var(--background, #050816);
 }
 
 .projects-grid{
-
-    margin-top:60px;
-
     display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:35px;
-
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:30px;
+    margin-top:60px;
 }
 
 .project-card{
-
-    background:#0F1B2D;
-
-    border-radius:18px;
-
-    border:1px solid rgba(0,217,255,.15);
-
-    padding:35px;
-
-    transition:.35s;
-
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    min-height:100%;
+    padding:32px;
+    overflow:hidden;
+    border:1px solid rgba(0,217,255,.22);
+    border-radius:calc(var(--radius, 18px) + 8px);
+    background:
+        linear-gradient(145deg, rgba(19,37,61,.82), rgba(5,8,22,.9)),
+        rgba(15,27,45,.72);
+    box-shadow:
+        0 24px 60px rgba(0,0,0,.32),
+        inset 0 1px 0 rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    opacity:0;
+    transform:translateY(34px);
 }
 
-.project-card:hover{
+.project-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:linear-gradient(135deg, rgba(255,255,255,.1), transparent 34%);
+    opacity:.55;
+}
 
-    transform:translateY(-8px);
+.project-card::after{
+    content:"";
+    position:absolute;
+    inset:auto 28px 0;
+    height:1px;
+    background:linear-gradient(90deg, transparent, rgba(0,217,255,.7), transparent);
+    opacity:.45;
+}
 
-    border-color:#00D9FF;
+.projects.active .project-card{
+    opacity:1;
+    transform:translateY(0);
+}
 
-    box-shadow:0 15px 35px rgba(0,217,255,.18);
+.projects.active .project-card:nth-child(2){
+    transition-delay:.09s;
+}
 
+.projects.active .project-card:nth-child(3){
+    transition-delay:.18s;
+}
+
+.project-card:hover,
+.projects.active .project-card:hover{
+    transform:translateY(-10px);
+    border-color:rgba(0,217,255,.68);
+    box-shadow:
+        0 28px 78px rgba(0,126,255,.22),
+        0 0 34px rgba(0,217,255,.16),
+        inset 0 1px 0 rgba(255,255,255,.12);
+}
+
+.project-card-header{
+    position:relative;
+    z-index:1;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:20px;
+    padding-right:8px;
 }
 
 .project-card h3{
-
-    font-size:28px;
-
-    margin-bottom:18px;
-
+    max-width:72%;
+    font-family:'Orbitron', sans-serif;
+    font-size:24px;
+    line-height:1.35;
+    color:var(--text, #ffffff);
 }
 
-.project-card p{
+.project-status{
+    flex:0 0 auto;
+    padding:7px 12px;
+    border:1px solid rgba(46,255,147,.36);
+    border-radius:999px;
+    background:rgba(46,255,147,.1);
+    color:#2eff93;
+    font-size:12px;
+    font-weight:800;
+    line-height:1;
+    box-shadow:0 0 22px rgba(46,255,147,.1);
+}
 
-    color:#B5C6D8;
+.project-section,
+.project-role,
+.project-learning,
+.project-footer{
+    position:relative;
+    z-index:1;
+}
 
-    line-height:32px;
+.project-section{
+    margin-top:26px;
+}
 
-    margin-top:20px;
+.project-section h4{
+    margin-bottom:12px;
+    color:#8feeff;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
 
+.project-overview{
+    color:var(--text2, #AFC2D6);
+    line-height:1.78;
+}
+
+.project-role{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    margin-top:24px;
+    padding:16px 0;
+    border-top:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.project-role span{
+    color:#8FA8C4;
+    font-size:13px;
+    font-weight:600;
+}
+
+.project-role strong{
+    color:#E3EEF9;
+    font-weight:700;
+    text-align:right;
 }
 
 .project-tags{
-
     display:flex;
-
     flex-wrap:wrap;
-
-    gap:12px;
-
+    gap:10px;
 }
 
 .project-tags span{
+    display:inline-flex;
+    align-items:center;
+    min-height:36px;
+    padding:8px 14px;
+    border:1px solid rgba(0,217,255,.26);
+    border-radius:999px;
+    background:rgba(0,217,255,.08);
+    color:#DFF8FF;
+    font-size:13px;
+    font-weight:700;
+    transform:translateY(0);
+    transition:
+        transform var(--transition, .35s) ease,
+        border-color var(--transition, .35s) ease,
+        background var(--transition, .35s) ease,
+        box-shadow var(--transition, .35s) ease;
+}
 
-    background:#081E34;
+.project-card:hover .project-tags span{
+    border-color:rgba(0,217,255,.52);
+    background:rgba(0,217,255,.13);
+    box-shadow:0 0 18px rgba(0,217,255,.1);
+}
 
-    border:1px solid rgba(0,217,255,.25);
+.project-responsibilities{
+    display:grid;
+    gap:11px;
+    padding-left:20px;
+}
 
-    color:#00D9FF;
+.project-responsibilities li{
+    color:#D6E6F5;
+    line-height:1.62;
+}
 
-    padding:8px 16px;
+.project-responsibilities li::marker{
+    color:var(--primary, #00D9FF);
+}
 
-    border-radius:30px;
+.project-learning{
+    margin-top:26px;
+    padding:18px 20px;
+    border:1px solid rgba(0,217,255,.26);
+    border-radius:var(--radius, 18px);
+    background:
+        linear-gradient(135deg, rgba(0,217,255,.12), rgba(19,37,61,.2)),
+        rgba(0,217,255,.06);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+}
 
+.project-learning span{
+    display:block;
+    margin-bottom:8px;
+    color:#8feeff;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1.4px;
+    text-transform:uppercase;
+}
+
+.project-learning p{
+    color:#DFF8FF;
+    line-height:1.68;
+}
+
+.project-footer{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    margin-top:auto;
+    padding-top:26px;
+}
+
+.project-footer span{
+    color:#8FA8C4;
+    font-size:13px;
+    font-weight:600;
+}
+
+.project-footer strong{
+    color:#2eff93;
+    font-family:'Orbitron', sans-serif;
     font-size:14px;
-
+    letter-spacing:1px;
 }

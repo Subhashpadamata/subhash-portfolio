@@ -49,7 +49,6 @@
    CARD HOVER
 ================================ */
 
-.project-card,
 .certificate-card,
 .info-card{
 
@@ -60,7 +59,6 @@
 
 }
 
-.project-card:hover,
 .certificate-card:hover,
 .info-card:hover{
 
@@ -69,6 +67,44 @@
     box-shadow:
     0 15px 35px rgba(0,217,255,.15);
 
+}
+
+.project-card{
+    transition:
+        opacity .75s ease,
+        transform .75s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+.project-card:hover .project-tags span{
+    animation:projectChipRise .6s ease both;
+}
+
+.project-card:hover .project-tags span:nth-child(2){
+    animation-delay:.04s;
+}
+
+.project-card:hover .project-tags span:nth-child(3){
+    animation-delay:.08s;
+}
+
+.project-card:hover .project-tags span:nth-child(4){
+    animation-delay:.12s;
+}
+
+@keyframes projectChipRise{
+    0%{
+        transform:translateY(0);
+    }
+
+    45%{
+        transform:translateY(-4px);
+    }
+
+    100%{
+        transform:translateY(-2px);
+    }
 }
 
 /* ===============================
