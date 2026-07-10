@@ -83,6 +83,70 @@
         box-shadow .35s ease;
 }
 
+.contact-card,
+.contact-cta-card{
+    transition:
+        opacity .75s ease,
+        transform .75s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+.contact-icon{
+    transition:
+        transform .45s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+.contact-card:hover .contact-icon,
+.contact-cta-card:hover .contact-icon{
+    transform:rotate(10deg) scale(1.05);
+}
+
+.contact-cta-button{
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+}
+
+.contact-cta-button:hover{
+    transform:translateY(-3px);
+}
+
+.footer{
+    transition:
+        opacity .85s ease,
+        transform .85s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+.footer-links a,
+.footer-links a::after,
+.footer-professional-links i{
+    transition:
+        width .35s ease,
+        color .35s ease,
+        text-shadow .35s ease,
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+@keyframes footerFadeIn{
+    from{
+        opacity:0;
+        transform:translateY(28px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 .project-card:hover .project-tags span{
     animation:projectChipRise .6s ease both;
 }

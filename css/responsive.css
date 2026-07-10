@@ -110,8 +110,20 @@ grid-template-columns:repeat(2,1fr);
 
 .contact-container{
 
-grid-template-columns:1fr;
+grid-template-columns:1fr !important;
 
+}
+
+.contact-container{
+    gap:24px !important;
+}
+
+.contact-cta-card{
+    padding:34px !important;
+}
+
+.footer-container{
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
 }
 
 .timeline-item{
@@ -252,6 +264,41 @@ font-size:34px;
 
 }
 
+.contact{
+    padding:90px 6% !important;
+}
+
+.contact-container{
+    margin-top:44px !important;
+}
+
+.contact-card{
+    min-height:104px !important;
+    padding:22px !important;
+}
+
+.contact-cta-card{
+    padding:28px !important;
+}
+
+.contact-cta-card h3{
+    font-size:28px !important;
+}
+
+.footer{
+    padding:62px 6% 26px !important;
+}
+
+.footer-container{
+    gap:28px !important;
+    padding:28px !important;
+}
+
+.footer-bottom{
+    align-items:flex-start !important;
+    flex-direction:column !important;
+}
+
 }
 
 /* ===================================
@@ -322,6 +369,51 @@ flex-direction:column;
     height:74px !important;
     border-radius:22px !important;
     font-size:29px !important;
+}
+
+.contact{
+    padding:80px 25px !important;
+}
+
+.contact-card{
+    align-items:flex-start !important;
+    min-height:auto !important;
+    padding:20px !important;
+}
+
+.contact-icon{
+    width:52px !important;
+    height:52px !important;
+    font-size:20px !important;
+}
+
+.contact-value{
+    font-size:15px !important;
+}
+
+.contact-cta-card{
+    padding:24px !important;
+}
+
+.contact-cta-card h3{
+    font-size:24px !important;
+}
+
+.contact-cta-button{
+    width:100% !important;
+}
+
+.footer{
+    padding:52px 25px 24px !important;
+}
+
+.footer-container{
+    grid-template-columns:1fr !important;
+    padding:24px !important;
+}
+
+.footer-brand h2{
+    font-size:24px !important;
 }
 
 }
