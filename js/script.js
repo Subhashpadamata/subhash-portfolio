@@ -49,8 +49,12 @@ if (typingText) {
 
 }
 
-const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-menu a");
+const sections = Array.from(document.querySelectorAll("section")).filter(section => {
+
+    return document.querySelector(`.nav-menu a[href="#${section.id}"]`);
+
+});
 
 window.addEventListener("scroll", () => {
 
@@ -157,6 +161,77 @@ moon.addEventListener("click",()=>{
     document.body.classList.toggle("light-mode");
 
 });
+
+// ==============================
+// Professional Highlights Counter
+// ==============================
+
+const highlightsSection = document.querySelector(".highlights");
+const highlightCards = document.querySelectorAll(".highlight-card");
+const highlightValues = document.querySelectorAll(".highlight-value");
+
+function animateHighlightValue(valueElement) {
+
+    const target = Number(valueElement.dataset.target);
+    const duration = 1200;
+    const startTime = performance.now();
+
+    function updateValue(currentTime) {
+
+        const progress = Math.min((currentTime - startTime) / duration, 1);
+        const currentValue = Math.floor(progress * target);
+
+        valueElement.textContent = currentValue;
+
+        if (progress < 1) {
+            requestAnimationFrame(updateValue);
+        }
+        else {
+            valueElement.textContent = target;
+        }
+
+    }
+
+    requestAnimationFrame(updateValue);
+
+}
+
+if (highlightsSection && "IntersectionObserver" in window) {
+
+    const highlightsObserver = new IntersectionObserver((entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                highlightCards.forEach((card, index) => {
+                    card.style.transitionDelay = `${index * 90}ms`;
+                    card.classList.add("active");
+                });
+
+                highlightValues.forEach(animateHighlightValue);
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold:.35
+    });
+
+    highlightsObserver.observe(highlightsSection);
+
+}
+else {
+
+    highlightCards.forEach(card => card.classList.add("active"));
+    highlightValues.forEach(value => {
+        value.textContent = value.dataset.target;
+    });
+
+}
 
 // ==========================
 // Scroll Reveal
